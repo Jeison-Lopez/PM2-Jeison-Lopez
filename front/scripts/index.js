@@ -1,3 +1,4 @@
+// Proyecto Full Stack
 // Función para crear una tarjeta de película
 function crearTarjeta(pelicula) {
   // Creamos un nuevo elemento div que representará la tarjeta de la película
@@ -55,13 +56,16 @@ function crearTarjeta(pelicula) {
   return tarjeta;
 }
 
-// Función para mostrar las tarjetas de películas en el contenedor
-function mostrarTarjetas() {
+//// Función para mostrar las tarjetas de películas en el contenedor
+// Función para mostrar los datos del servidor
+function mostrarTarjetas(data) {
   // Obtenemos el contenedor donde se mostrarán las tarjetas de películas
   const contenedor = document.getElementById("container");
 
-  // Iteramos sobre cada película en el array tempData
-  tempData.forEach((pelicula) => {
+  //// Iteramos sobre cada película en el array tempData
+  ////tempData.forEach((pelicula) => {}
+  // Itermaos sobre cada elemento del servidor
+  data.forEach((pelicula) => {
     // Creamos una tarjeta para la película actual
     const tarjeta = crearTarjeta(pelicula);
     // Agregamos la tarjeta al contenedor de películas en el HTML
@@ -69,5 +73,17 @@ function mostrarTarjetas() {
   });
 }
 
-// Llamada a la función para mostrar las tarjetas de películas al cargar la página
-mostrarTarjetas();
+//// Llamada a la función para mostrar las tarjetas de películas al cargar la página
+//// mostrarTarjetas();
+
+// Función para obtener los datos del servidor y mostrar las tarjetas de películas
+function obtenerDatosYMostrarTarjetas() {
+  // Realizamos una solicitud GET a la URL del servidor
+  $.get("https://students-api.2.us-1.fl0.io/movies", function (datos) {
+    // Llamamos a la función para mostrar las tarjetas de películas con los datos recibidos del servidor
+    mostrarTarjetas(datos);
+  });
+}
+
+// Llamada a la función para obtener los datos del servidor y mostrar las tarjetas de películas al cargar la página
+obtenerDatosYMostrarTarjetas();
