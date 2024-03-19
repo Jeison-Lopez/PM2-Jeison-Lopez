@@ -64,7 +64,7 @@ function mostrarTarjetas(data) {
 
   //// Iteramos sobre cada película en el array tempData
   ////tempData.forEach((pelicula) => {}
-  // Itermaos sobre cada elemento del servidor
+  // Iteramos sobre cada elemento del servidor
   data.forEach((pelicula) => {
     // Creamos una tarjeta para la película actual
     const tarjeta = crearTarjeta(pelicula);
@@ -79,7 +79,7 @@ function mostrarTarjetas(data) {
 // Función para obtener los datos del servidor y mostrar las tarjetas de películas
 function obtenerDatosYMostrarTarjetas() {
   // Realizamos una solicitud GET a la URL del servidor
-  $.get("https://students-api.2.us-1.fl0.io/movies", function (datos) {
+  $.get("https://students-api.up.railway.app/movies", function (datos) {
     // Llamamos a la función para mostrar las tarjetas de películas con los datos recibidos del servidor
     mostrarTarjetas(datos);
   });
