@@ -1,36 +1,35 @@
+// Importación de módulos
 const mostrarTarjetas = require("./showCards");
 const axios = require("axios");
 
-// Función para obtener los datos del servidor y mostrar las tarjetas de películas
+// Definición de la URL del servidor como constante
+const API_URL = "https://students-api.up.railway.app/movies";
+
+// Función para obtener datos del servidor y mostrar tarjetas de películas
 async function obtenerDatosYMostrarTarjetas() {
   try {
-    // Realizamos una solicitud GET a la URL del servidor usando axios
-    const response = await axios.get(
-      "https://students-api.up.railway.app/movies"
-    );
-    // Llamamos a la función para mostrar las tarjetas de películas con los datos recibidos del servidor
-    mostrarTarjetas(response.data);
+    const response = await axios.get(API_URL); // Realiza una solicitud GET al servidor
+    mostrarTarjetas(response.data); // Muestra las tarjetas de películas
   } catch (error) {
     console.error(
-      "Error al obtener y mostrar las tarjetas de películas:",
+      "Ocurrió un error al obtener y mostrar las tarjetas de películas:",
       error
     );
   }
 }
 
-// Llamada a la función para obtener los datos del servidor y mostrar las tarjetas de películas al cargar la página
+// Llamada a la función para obtener datos y mostrar tarjetas al cargar la página
 obtenerDatosYMostrarTarjetas();
 
-// Todo: Pestaña
-// Obtengo el título actual del documento y lo asigno a la variable docTitle
+// Almacena el título actual del documento
 let docTitle = document.title;
-// Agrego un evento que se dispara cuando la ventana pierde el foco
+
+// Cambia el título del documento cuando la ventana pierde el foco
 window.addEventListener("blur", () => {
-  // Cambio el título del documento cuando la ventana pierde el foco
-  document.title = "Vuelve 😔";
+  document.title = "Por favor, vuelve 😔"; // Mensaje emotivo para el usuario
 });
-// Agrego un evento que se dispara cuando la ventana obtiene el foco
+
+// Restaura el título del documento cuando la ventana obtiene el foco
 window.addEventListener("focus", () => {
-  // Restauro el título del documento al título original almacenado en la variable docTitle cuando la ventana obtiene el foco
-  document.title = docTitle;
+  document.title = docTitle; // Restaura el título original del documento
 });
