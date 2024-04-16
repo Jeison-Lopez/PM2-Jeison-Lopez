@@ -1,12 +1,26 @@
 const mostrarTarjetas = require("./showCards");
-// Función para obtener los datos del servidor y mostrar las tarjetas de películas
+const axios = require("axios");
+/* // Función para obtener los datos del servidor y mostrar las tarjetas de películas
 function obtenerDatosYMostrarTarjetas() {
   // Realizamos una solicitud GET a la URL del servidor
   $.get("https://students-api.up.railway.app/movies", function (datos) {
     // Llamamos a la función para mostrar las tarjetas de películas con los datos recibidos del servidor
     mostrarTarjetas(datos);
   });
-}
+} */
+// Petición a la URL con axios
+const fetchData = async () => {
+  try {
+    const response = await axios.get(
+      "https://students-api.up.railway.app/movies"
+    );
+    function obtenerDatosYMostrarTarjetas(datos) {
+      mostrarTarjetas(datos);
+    }
+  } catch (error) {}
+};
+
+fetchData();
 
 // Llamada a la función para obtener los datos del servidor y mostrar las tarjetas de películas al cargar la página
 obtenerDatosYMostrarTarjetas();
