@@ -1,26 +1,22 @@
 const mostrarTarjetas = require("./showCards");
 const axios = require("axios");
-/* // Función para obtener los datos del servidor y mostrar las tarjetas de películas
-function obtenerDatosYMostrarTarjetas() {
-  // Realizamos una solicitud GET a la URL del servidor
-  $.get("https://students-api.up.railway.app/movies", function (datos) {
-    // Llamamos a la función para mostrar las tarjetas de películas con los datos recibidos del servidor
-    mostrarTarjetas(datos);
-  });
-} */
-// Petición a la URL con axios
-const fetchData = async () => {
+
+// Función para obtener los datos del servidor y mostrar las tarjetas de películas
+async function obtenerDatosYMostrarTarjetas() {
   try {
+    // Realizamos una solicitud GET a la URL del servidor usando axios
     const response = await axios.get(
       "https://students-api.up.railway.app/movies"
     );
-    function obtenerDatosYMostrarTarjetas(datos) {
-      mostrarTarjetas(datos);
-    }
-  } catch (error) {}
-};
-
-fetchData();
+    // Llamamos a la función para mostrar las tarjetas de películas con los datos recibidos del servidor
+    mostrarTarjetas(response.data);
+  } catch (error) {
+    console.error(
+      "Error al obtener y mostrar las tarjetas de películas:",
+      error
+    );
+  }
+}
 
 // Llamada a la función para obtener los datos del servidor y mostrar las tarjetas de películas al cargar la página
 obtenerDatosYMostrarTarjetas();
@@ -35,6 +31,6 @@ window.addEventListener("blur", () => {
 });
 // Agrego un evento que se dispara cuando la ventana obtiene el foco
 window.addEventListener("focus", () => {
-  // Restauro el título del documento al título original almacenado en la variable docTitle cuadno la ventan obtiene el foco
+  // Restauro el título del documento al título original almacenado en la variable docTitle cuando la ventana obtiene el foco
   document.title = docTitle;
 });
