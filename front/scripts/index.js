@@ -3,7 +3,7 @@ const mostrarTarjetas = require("./showCards");
 const axios = require("axios");
 
 // Definición de la URL del servidor como constante
-const API_URL = "https://students-api.up.railway.app/movies";
+const API_URL = "http://localhost:3000/movies";
 
 // Función para obtener datos del servidor y mostrar tarjetas de películas
 async function obtenerDatosYMostrarTarjetas() {
