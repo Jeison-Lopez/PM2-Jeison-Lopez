@@ -90,6 +90,18 @@ footer {
 }
 
 /* Enlaces */
+.nombre {
+  color: #f18921;
+  font-weight: bold;
+  font-size: 1.8em;
+}
+
+.nombre:hover {
+  color: #f18921;
+  font-weight: bold;
+  font-size: 2em;
+  transition: 0.3s;
+}
 
 a {
   font-weight: bold;
