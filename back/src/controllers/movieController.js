@@ -11,4 +11,4 @@ const getAllMovies = (req, res) => {
 };
 
 // Exportamos el controlador para poder utilizarlo en la solicitud
-module.exports = { getAllMovies };
+module.exports = getAllMovies;
