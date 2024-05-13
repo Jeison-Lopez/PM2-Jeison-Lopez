@@ -7,7 +7,7 @@ describe("CarritoCompra", () => {
     carrito = new CarritoCompra();
   });
 
-  test("agregarProducto agrega un producto al carrito", () => {
+  it("agregarProducto agrega un producto al carrito", () => {
     // Mock function para simular agregar un producto
     const producto = { nombre: "Producto 1", precio: 10 };
     const agregarProductoMock = jest.fn();
@@ -19,7 +19,7 @@ describe("CarritoCompra", () => {
     expect(agregarProductoMock).toHaveBeenCalledWith(producto);
   });
 
-  test("calcularTotal llama al método calcularTotal correctamente", () => {
+  it("calcularTotal llama al método calcularTotal correctamente", () => {
     // Mock function para simular el cálculo del total
     const calcularTotalMock = jest
       .spyOn(carrito, "calcularTotal")
@@ -35,7 +35,7 @@ describe("CarritoCompra", () => {
     calcularTotalMock.mockRestore();
   });
 
-  test("aplicarDescuento aplica el descuento correctamente", () => {
+  it("aplicarDescuento aplica el descuento correctamente", () => {
     // Mock function para simular aplicar un descuento
     const porcentajeDescuento = 10;
     const totalConDescuento = 90;
