@@ -2,11 +2,9 @@
 const { Router } = require("express");
 // Creo una variable router la cual sera una instancia del enrutador
 const router = Router();
-// Requerimos el controlador
-const getAllMovies = require("../controllers/movieController");
-// Defino el típo de solicitud que espero, en este caso una solicitud de tipo GET
-// La estructura es: El enrutador, el tipo de solicitud, la dirección, el controlador(Una función)
-// ? Experando una petición de tipo GET a /movies
-router.get("/movies", getAllMovies);
+// Traigo el enrutador de "movies"
+const moviesRouter = require("./moviesRouter");
+// Encamino el enrutador a su módulo
+router.use("/movies", moviesRouter);
 
 module.exports = router;

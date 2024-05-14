@@ -23,7 +23,7 @@ class Movie {
   }
 }
 // Función que retorna el arreglo de películas
-const getMovies = () => {
+const getMovies = async () => {
   const moviesData = [
     {
       title: "Guardians of the Galaxy Vol. 2",

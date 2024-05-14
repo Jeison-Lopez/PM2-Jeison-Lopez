@@ -99,7 +99,7 @@ footer {
 .nombre:hover {
   color: #f18921;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.8em;
   transition: 0.3s;
 }
 
