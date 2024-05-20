@@ -9,7 +9,7 @@ const cors = require("cors");
 // Inicializamos express dentro de app
 const app = express();
 // Middleware para registrar las solicitudes HTTP
-//!Combined me da: Dirección IP del ciente, Usuario autenticado(si existe), Fecha y hora de la solicitud, Método HTTP('GET', 'POST', etc), URL solicitada, Código de estado de la respueta HTTP, Tamaño de la respuesta en bytes, referencia de la solicitud(URL de la página que hizo la solicitud), Agente de usuario(información sobre el navegador del cliente).
+//!Combined: Dirección IP del ciente, Usuario autenticado(si existe), Fecha y hora de la solicitud, Método HTTP('GET', 'POST', etc), URL solicitada, Código de estado de la respueta HTTP, Tamaño de la respuesta en bytes, referencia de la solicitud(URL de la página que hizo la solicitud), Agente de usuario(información sobre el navegador del cliente).
 app.use(morgan("combined"));
 // Middleware para permitir solicitudes desde cualquier origen
 app.use(cors());
