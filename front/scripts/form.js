@@ -28,7 +28,10 @@ const cbSend = async (event) => {
     year: document.getElementById("year").value,
     director: document.getElementById("director").value,
     duration: document.getElementById("duration").value,
-    genre: document.getElementById("genre").value,
+    genre: document
+      .getElementById("genre")
+      .value.split(",")
+      .map((genero) => genero.trim()),
     rate: document.getElementById("rate").value,
     poster: document.getElementById("poster").value,
   };
