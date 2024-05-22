@@ -15,7 +15,7 @@ app.use(morgan("combined"));
 app.use(cors());
 // Middleware para analizar el cuerpo de las solicitudes en formato JSON
 app.use(express.json());
-// Hacemos que app pueda conocer y utilizar el enrutador con el metodo USE
+// Hacemos que app pueda conocer y utilizar el enrutador con el metodo USE y Post
 app.use(router);
 // Ponemos a disposición app
 module.exports = app;

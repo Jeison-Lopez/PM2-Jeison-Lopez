@@ -138,7 +138,8 @@ a:hover {
 .index,
 .about,
 .history,
-.recommended {
+.recommended,
+.form {
   color: #f18921;
 }
 

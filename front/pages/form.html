@@ -34,7 +34,7 @@
           Filmoteca
         </a>
         <ul class="nav justify-content-center">
-          <li class="zoom"><a href="../index.html" class="index">Inicio</a></li>
+          <li class="zoom"><a href="../index.html">Inicio</a></li>
           <li class="zoom">
             <a href="about.html">Sobre mi proyecto</a>
           </li>
@@ -44,7 +44,7 @@
           <li class="zoom">
             <a href="recommended-websites.html">Webs recomendadas</a>
           </li>
-          <li><a href="#">Formulario</a></li>
+          <li><a href="#" class="form">Formulario</a></li>
         </ul>
       </nav>
     </header>
@@ -112,6 +112,16 @@
           />
         </div>
         <div>
+          <label for="poster">Poster</label>
+          <input
+            type="text"
+            name="poster"
+            id="poster"
+            placeholder="URL"
+            required
+          />
+        </div>
+        <div>
           <button type="submit" id="send">Enviar</button>
           <button type="button" id="clear">Limpiar</button>
         </div>
@@ -119,6 +129,5 @@
     </div>
     <!-- Scripts -->
     <script src="../public/bundle.js"></script>
-    <script src="../scripts/form.js"></script>
   </body>
 </html>

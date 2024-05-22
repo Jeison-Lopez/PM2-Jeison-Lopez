@@ -5,8 +5,16 @@ const getMovies = async () => {
   return movies;
 };
 
-module.exports = { getMovies };
+//TODO : Implementar en el módulo de servicio de películas una función async que reciba por parámetro los datos de las películas y llame al método correspondiente del modelo Movie para crear una nueva película en la base de datos.
 
+// Función async para crear una nueva película
+const createMovies = async (data) => {
+  // Utilizar el metodo create() para el modelo "Movie"
+  const movie = await Movie.create(data);
+  return movie;
+};
+
+module.exports = { getMovies, createMovies };
 // // Extra credit: Clase que responde con instancias
 // class Movie {
 //   constructor({ title, year, director, duration, genre, rate, poster }) {
