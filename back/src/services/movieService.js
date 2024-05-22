@@ -1,3 +1,12 @@
+const Movie = require("../models/Movie");
+
+const getMovies = async () => {
+  const movies = await Movie.find();
+  return movies;
+};
+
+module.exports = { getMovies };
+
 // // Extra credit: Clase que responde con instancias
 // class Movie {
 //   constructor({ title, year, director, duration, genre, rate, poster }) {
@@ -66,12 +75,3 @@
 //   Movie,
 //   getMovies,
 // };
-
-const Movie = require("../models/Movie");
-
-const getMovies = async () => {
-  const movies = await Movie.find();
-  return movies;
-};
-
-module.exports = { getMovies };
