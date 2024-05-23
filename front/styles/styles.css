@@ -144,3 +144,68 @@ a:hover {
 }
 
 /* Formulario */
+
+.div-container {
+  background: linear-gradient(
+    to right,
+    rgba(87, 72, 67, 0.521) 0%,
+    26.12612545490265%,
+    rgba(239, 231, 210, 0.664) 52.2522509098053%,
+    76.12612545490265%,
+    rgba(13, 10, 27, 0.336) 100%
+  );
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(189, 82, 11);
+  width: 50vw;
+  margin-left: 50vh;
+}
+
+.form-container {
+  background: linear-gradient(
+    to right,
+    rgba(87, 72, 67, 0.521) 0%,
+    26.12612545490265%,
+    rgba(239, 231, 210, 0.664) 52.2522509098053%,
+    76.12612545490265%,
+    rgba(13, 10, 27, 0.336) 100%
+  );
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(189, 82, 11);
+  width: 50vw;
+  margin-left: 2vh;
+}
+
+.form-control,
+.form-control:focus,
+.form-control:active {
+  background-color: rgba(189, 82, 11, 0);
+  font-weight: bold;
+}
+.black {
+  color: black;
+  font-weight: bold;
+}
+
+button {
+  background-color: #4caf4f00;
+  color: rgb(0, 0, 0);
+  border: 1px solid #a5aca5ce;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.green:hover {
+  background-color: #28a82e;
+}
+
+.red:hover {
+  background-color: #aa2e2e;
+}

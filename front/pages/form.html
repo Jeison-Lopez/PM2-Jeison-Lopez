@@ -50,86 +50,101 @@
         </ul>
       </nav>
     </header>
-    <div class="form-container">
-      <h2>Registro de películas</h2>
-      <form action="" id="form">
-        <div>
-          <label for="title">Título</label>
+    <div class="div-container">
+      <h2 class="fw-lighter">Registro de películas</h2>
+      <form action="" id="form" class="position-relative form-container">
+        <div class="mb-4">
+          <label for="title" class="fs-5 fw-ligther black">Título</label>
           <input
             type="text"
             name="title"
             id="title"
+            class="form-control border border-dark-subtle text-center fw-ligther border"
             placeholder="Ej: Punto De Quiebre"
             required
           />
         </div>
-        <div>
-          <label for="year">Año</label>
+        <div class="mb-4">
+          <label for="year" class="fs-5 fw-ligther black">Año</label>
           <input
             type="number"
             name="year"
             id="year"
+            class="form-control border border-dark-subtle text-center fw-ligther"
             placeholder="Año de Estreno"
             required
           />
         </div>
-        <div>
-          <label for="director">Director</label>
+        <div class="mb-4">
+          <label for="director" class="fs-5 fw-ligther black">Director</label>
           <input
             type="text"
             name="director"
             id="director"
+            class="form-control border border-dark-subtle text-center fw-ligther"
             placeholder="Director de la Película"
             required
           />
         </div>
-        <div>
-          <label for="duration">Duración</label>
+        <div class="mb-4">
+          <label for="duration" class="fs-5 fw-ligther black">Duración</label>
           <input
             type="text"
             name="duration"
             id="duration"
+            class="form-control border border-dark-subtle text-center fw-ligther"
             placeholder="Duración de la Película (minutos)"
             required
           />
         </div>
-        <div>
-          <label for="genre">Género</label>
+        <div class="mb-4">
+          <label for="genre" class="fs-5 fw-ligther black">Género</label>
           <input
             type="text"
             name="genre"
             id="genre"
+            class="form-control border border-dark-subtle text-center fw-ligther"
             placeholder="Ej: Acción, Drama, Comedia Etc.."
             required
           />
         </div>
-        <div>
-          <label for="rate">Rating</label>
+        <div class="mb-4">
+          <label for="rate" class="fs-5 fw-ligther black">Rating</label>
           <input
             type="number"
             name="rate"
             id="rate"
+            class="form-control border border-dark-subtle text-center fw-ligther"
             placeholder="Calificación"
             required
           />
         </div>
-        <div>
-          <label for="poster">Poster</label>
+        <div class="mb-4">
+          <label for="poster" class="fs-5 fw-ligther black">Poster</label>
           <input
             type="text"
             name="poster"
             id="poster"
+            class="form-control border border-dark-subtle text-center fw-ligther"
             placeholder="URL"
             required
           />
         </div>
-        <div>
-          <button type="submit" id="send">Enviar</button>
-          <button type="button" id="clear">Limpiar</button>
+        <div class="mb-4">
+          <button type="submit" id="send" class="button green">Enviar</button>
+          <button type="button" id="clear" class="button red">Limpiar</button>
         </div>
       </form>
     </div>
     <!-- Scripts -->
     <script src="../scripts/form.js"></script>
+    <!--TAB Edit-->
+    <script src="../scripts/tab.js"></script>
+    <!-- Bootstrap Bundle JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
